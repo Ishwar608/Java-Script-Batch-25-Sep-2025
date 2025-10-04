@@ -6,6 +6,104 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <!-- <h1 id="massage"></h1> -->
+    <!-- <button type="button" onclick="msgPrint()">Print Massage</button> -->
   </body>
+  <script>
+    // const massage = 'Hello Wolrd';
+
+    // const massage1 = 'Hello Bangladesh';
+    // console.log('Inside Block: ' + massage1);
+
+    // console.log('massage value:  ' + massage);
+    // console.log('massage value:  ' + massage1);
+
+    // massagePrint();
+
+    // let _x1 = 10;
+    // let $y2 = 20;
+
+    // let sum = _x1 + $y2;
+    // document.write('Sum Value: ' + sum);
+
+    // Data types in JavaScript
+    // let name = 'John Doe'; // String
+    // let age = 30; // Number
+    // let isStudent = false; // Boolean
+    // let address; // Undefined
+    // let phone = null; // Null
+    // let hobbies = ['reading', 'traveling', 'coding']; // Array
+    // let person = { name: 'John', age: 30 }; // Object
+    // let bigNumber = 12345678901234567890n; // BigInt
+    // let symbol = Symbol('unique'); // Symbol
+    // console.log('Name : - ' + typeof name); // String
+    // console.log('age : - ' + typeof age); // Number
+    // console.log('is student : - ' + typeof isStudent); // Boolean
+    // console.log('address : - ' + typeof address); // Undefined
+
+    // console.log('phone : -  ' + typeof phone); // Object (this is a known quirk in JavaScript)
+    // console.log('hobbies : -  ' + typeof hobbies); // Object (arrays are a type of object)
+    // console.log('person : -  ' + typeof person); // Object
+    // console.log('bigNumber : -  ' + typeof bigNumber); // BigInt (ES2020)
+    // console.log('symbol : -  ' + typeof symbol); // Symbol (ES6)
+
+    // const allTypes = {
+    //   stringType: 'Hello, world!',
+    //   numberType: 42,
+    //   booleanType: true,
+    //   nullType: null,
+    //   undefinedType: undefined,
+    //   arrayType: [1, 2, 3],
+    //   objectType: { key: 'value' },
+    //   functionType: function () {
+    //     return 'I am a function';
+    //   },
+    //   symbolType: Symbol('unique'),
+    //   bigintType: 12345678901234567890n,
+    // };
+
+    // console.log(allTypes);
+
+    // let a = 10;
+
+    // let b = a++;
+
+    // console.log('a value: ' + a);
+    // console.log('b value: ' + b);
+
+    // let text1 = 'What a very ';
+    // text1 += 'nice day';
+
+    // console.log(text1);
+    // JavaScript Comparison Operators Examples
+    // let x = 10;
+    // let y = 20;
+    // console.log('x == y:', x == y); // false (equal to)
+    // console.log('x === y:', x === y); // false (equal value and type)
+    // console.log('x != y:', x != y); // true (not equal)
+    // console.log('x !== y:', x !== y); // true (not equal value or type)
+    // console.log('x > y:', x > y); // false (greater than)
+    // console.log('x < y:', x < y); // true (less than)
+    // console.log('x >= 10:', x >= 10); // true (greater than or equal to)
+    // console.log('y <= 20:', y <= 20); // true (less than or equal to)
+    // {
+    //   const msg = 'Hello Bangladesh';
+    //   console.log('Inside Function: ' + msg);
+    // }
+    // console.log('Outside Function: ' + msg);
+
+    let userName = 'John';
+
+    function showMessage() {
+      let userName = 'Bob'; // (1) changed the outer variable
+
+      let message = 'Hello, ' + userName;
+      console.log(message);
+    }
+    console.log(userName);
+
+    showMessage();
+
+    console.log(userName);
+  </script>
 </html>
