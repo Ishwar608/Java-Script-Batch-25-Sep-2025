@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getGrade(percentage) {
+        if (percentage >= 90) {
+          return 'A';
+        } else if (percentage >= 80) {
+          return 'B';
+        } else if (percentage >= 70) {
+          return 'C';
+        } else if (percentage >= 60) {
+          return 'D';
+        } else {
+          return 'F';
+        }
+      }
+      function getStudentDetails(name, age, email, totalMarks, grade) {
+        document.write('Name: ' + name + ', Age: ' + age + ', Email: ' + email + ', Total Marks: ' + totalMarks + ', Grade: ' + grade + '<br>');
+      }
+      function processStudentDetails(name, age, email, totalMarks, callback) {
+        let percentage = (totalMarks / 500) * 100;
+        let grade = getGrade(percentage);
+        callback(name, age, email, totalMarks, grade);
+      }
+      // Call the function with a callback
+      // processStudentDetails('John Doe', 20, 'john.doe@example.com', 85, getStudentDetails);
+      // processStudentDetails('Jane Smith', 22, 'jane.smith@example.com', 92, getStudentDetails);
+      // processStudentDetails('Alice Johnson', 19, 'alice.johnson@example.com', 78, getStudentDetails);
+      // processStudentDetails('Bob Brown', 21, 'bob.brown@example.com', 65, getStudentDetails);
+      // processStudentDetails('Charlie Davis', 23, 'charlie.davis@example.com', 88, getStudentDetails);
+      getStudentDetails('Test User', 25, 'test.user@example.com', 75, 'C');
+    </script>
+  </body>
+</html>

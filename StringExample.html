@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Example: Get the last 3 letters of "JavaScript" and make them uppercase
+      let str = 'JavaScript';
+      let result = str.slice(-3).toUpperCase();
+      console.log(result); // Output: IPT
+
+      // Example: Create a short form: Input: "Open Artificial Intelligence" → Output: "OAI"
+      let phrase = 'heloo java script';
+      let words = phrase.split(' ');
+      let shortForm = '';
+
+      for (let word of words) {
+        shortForm += word[0].toUpperCase();
+      }
+
+      console.log(shortForm); // Output: OAI
+
+      // Example: Count the number of words in "JavaScript is fun to learn".
+      let sentence = 'JavaScript is fun to learn';
+      let wordCount = sentence.split(' ').length;
+      console.log(wordCount); // Output: 5
+
+      // Example: Mask an email address (e.g., "abc@gmail.com" → "a**@gmail.com").
+      let email = 'abc@gmail.com';
+      let atIndex = email.indexOf('@');
+      let masked = email[0] + '**' + email.slice(atIndex);
+      console.log(masked); // Output: a**@gmail.com
+
+      // Example: Extract domain name from an email address.
+      let emailDomain = 'abc@gmail.com';
+      let domain = emailDomain.split('@')[1];
+      console.log('emailDomain : - ', domain); // Output: gmail.com
+    </script>
+  </body>
+</html>

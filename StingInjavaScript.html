@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let massage = 'Hello india';
+
+      // Before change single qoute string.
+      //   console.log(massage);
+
+      //   massage = 'Hello\\ world';
+
+      //after changes value as double qoute string.
+      //   console.log(massage);
+
+      //   let studentList = '';
+      //   for (let i = 1; i < 5; i++) {
+      //     studentList += '* student - ' + i + '\n';
+      //   }
+      //   massage = `Hello
+      //   ${studentList} `;
+
+      //   console.log(massage.length);
+
+      // let str = 'As sly as a fox, as strong as an ox';
+
+      // let target = 'as'; // let's look for it
+
+      // let pos = 0;
+      // while (true) {
+      //   let foundPos = str.indexOf(target, pos);
+      //   console.log('foundPos' + foundPos);
+
+      //   if (foundPos == -1) break;
+
+      //   console.log(`Found at ${foundPos}`);
+      //   pos = foundPos + 1; // continue the search from the next position
+      // }
+      //   console.log(str[27]);
+
+      // let msgObj1 = new String('Hello');
+      // let msgObj2 = new String('Hello');
+      // let msg1 = 'Hello';
+      // let msg2 = 'Hello';
+
+      // console.log('Msg1', typeof msg1);
+      // console.log('Msg2', typeof msg2);
+
+      // console.log('MsgObj1', typeof msgObj1);
+      // console.log('MsgObj2', typeof msgObj2);
+
+      let tags = ['template strings', 'javascript', 'es6'];
+      let fullTag = '';
+      for (let tag of tags) {
+        fullTag += `${tag} `;
+      }
+      // console.log(fullTag);
+
+      function charAtPosition(str, position) {
+        // if (position < 0 || position >= str.length) {
+        //   return 'Invalid position';
+        // }
+
+        return str.at(position);
+      }
+      // console.log(charAtPosition('Hello, World!', -3)); // Output: '!'
+
+      let str = 'stringify';
+
+      // these are same for substring
+      console.log(str.substring(2, 6)); // "ring"
+      console.log(str.substring(6, 2)); // "ring"
+
+      // ...but not for slice:
+      console.log(str.slice(2, 6)); // "ring" (the same)
+      console.log(str.slice(6, 2)); // "" (an empty string)
+
+      // Create a custom function for reverse string without using inbuild function.
+      
+    </script>
+  </body>
+</html>

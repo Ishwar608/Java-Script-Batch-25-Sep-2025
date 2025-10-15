@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Example</title>
+  </head>
+  <body>
+    <script>
+      function showMessage() {
+        // function declaration
+        let a = 10; // local variable
+        console.log('Add:' + a); // Function body
+        console.log('Multi' + a); // Function body
+      }
+      //   showMessage(); // Function invocation or call
+
+      // Perform operations
+
+      function calculateOperations(n1, n2 = 1) {
+        // Display results
+        let addition = n1 + n2;
+        let subtraction = n1 - n2;
+        let multiplication = n1 * n2;
+        let division = n1 / n2;
+
+        document.write('Addition: ' + addition + '<br>');
+        document.write('Subtraction: ' + subtraction + '<br>');
+        document.write('Multiplication: ' + multiplication + '<br>');
+        document.write('Division: ' + division + '<br>');
+      }
+
+      // Call the function
+      //   calculateOperations(20, 5);
+
+      // Default Parameters
+      function statusMessage(name, status = 'Active') {
+        document.write('Name: ' + name + ', Status: ' + status + '<br>');
+      }
+    //   statusMessage('Alice'); // Uses default status
+    //   statusMessage('Bob', 'Inactive'); // Overrides default status
+
+      function positionOfEmpBasedOnName(name) {
+        let position;
+        if(name === 'Alice') {
+            position = 'Manager';
+        } else if(name === 'Bob') {
+            position = 'Team Lead';
+        }else {
+            position = 'Employee';
+        }
+        return position;
+      }
+    function Employee(name, age, position = positionOfEmpBasedOnName(name)) {
+       document.write('Name: ' + name + ', Age: ' + age + ', Position: ' + position + '<br>');
+    }   
+    // Employee('Alice', 30); // Uses default position based on name
+    // Employee('Bob', 25); // Uses default position based on name
+    // Employee('Testing', 25); // Uses default position based on name
+
+    function sumOfTwoNumbers(n1, n2) {
+        return n1 + n2;
+       
+    }
+     function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+      }
+      function yes() {
+        alert("You agreed.");
+      }
+      function no() {
+        alert("You canceled the execution.");
+      }
+    //  ask("Do you agree?", yes, no);
+    const isLeapYear = (year) => {
+         if(year % 4 === 0 && year % 100 !== 0)
+        {
+          return true;
+        }
+        else if (year % 400 === 0) {
+          return true;
+        }
+        return false;
+      }
+      // console.log(isLeapYear(2020)); // true
+      // console.log(isLeapYear(1900)); // false
+      // console.log(isLeapYear(2000)); // true
+      // console.log(isLeapYear(2021)); // false
+      function processPayment(amount, onSuccess, onFailure) {
+        if (confirm(`Confirm payment of $${amount}?`)) {
+          onSuccess(amount);
+        } else {
+          onFailure();
+        }
+      }
+      onSuccess = (amount) => {
+        alert(`Payment of $${amount} was successful.`);
+      };
+      onFailure = () => {
+        alert("Payment failed. Please try again.");
+      };
+      // processPayment(100, onSuccess, onFailure); // Successful payment
+      function getGrade(percentage) {
+        let grade;
+        if (percentage >= 90) {
+          grade = 'A';
+        } else if (percentage >= 80) {
+          grade = 'B';
+        } else if (percentage >= 70) {
+          grade = 'C';
+        } else {
+          grade = 'D';
+        }
+        document.write('Grade: ' + grade + '<br>');
+      }
+      function getStudentDetails(name, age, email, totalMarks = 0, getGrade) {
+        let per = (totalMarks / 500) * 100;
+        getGrade(per);
+      }
+    </script>
+</html>

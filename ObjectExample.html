@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        item_name: 'abcd',
+        price: 500,
+        create_At: new Date(),
+        // getSalary: function () {
+        //   return 5000;
+        // },
+      };
+
+      const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        id: 5566,
+        fullName: function () {
+          return this.firstName + ' ' + this.lastName;
+        },
+        obj1: {
+          key1: 'value1',
+          key2: 'value2',
+        },
+      };
+      delete person.obj1;
+      // console.log('Before Object change', JSON.stringify(product));
+
+      // product.item_name = 'efgh';
+      // product.newKey = 'newValue';
+      // product['price'] = 1000;
+
+      // console.log('After Object chages', product);
+      // console.log('Person details', person);
+
+      const fruits = [
+        ['apples', 300],
+        ['pears', 900],
+        ['bananas', 500],
+      ];
+
+      // const fruitObj = Object.fromEntries(fruits);
+      // console.log('fruitObj : - ', fruitObj);
+
+      // let object1 = { a: 1, b: 2, c: 3 };
+      // let object2 = { c: 30, d: 40, e: 50 };
+      // let mergedObject = { ...object1, ...object2 };
+      // console.log('mergedObject : - ', mergedObject);
+
+      function showPersonDetails(person) {
+        // person.fullName = person.firstName + ' ' + person.lastName;
+
+        document.write('<h3>Person Details:</h3>');
+        document.write('Full Name: ' + person.fullName() + '<br>');
+        document.write('Age: ' + person.age + '<br>');
+        document.write('City: ' + person.city + '<br><hr>');
+      }
+
+      let person1 = {
+        firstName: 'Pintu',
+        lastName: 'Suthar',
+        age: 25,
+        city: 'Ahmedabad',
+        fullName: function () {
+          return this.firstName + ' ' + this.lastName;
+        },
+      };
+
+      // Create second person object
+      let person2 = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30,
+        city: 'Mumbai',
+        fullName: function () {
+          return this.firstName + ' ' + this.lastName;
+        },
+      };
+
+      // Call the same function for both
+      showPersonDetails(person1);
+      showPersonDetails(person2);
+    </script>
+  </body>
+</html>
